@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 1</title>
+    <link rel="stylesheet" href="../css/output.css">
+</head>
+<body>
+    <header class=" p-4 text-center shadow-md mb-2" >
+        <a href="../../index.html"><h1 class="text-3xl font-black  uppercase">
+            Problema 1
+        </h1></a>
+    </header>
+    <main class="container  mx-auto ">
+        <h2 class="text-2xl font-black  uppercase"  >
+            Fórmula
+        </h2>
+    
+      
+            <div class="flex flex-row content-center items-center justify-center">
+                <math class="text-7xl" xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mfenced open="[" close="]" separators="    ">
+                       
+                        <mfrac>
+                         <mi>dVc</mi>
+                         <mi>dt</mi>
+                        </mfrac>
+                        
+                       </mfenced>
+                    
+                    </mfenced>
+                    <mo>=</mo>
+                    <mfenced open="[" close="]" separators="    ">
+                        <mo>-</mo>
+                        <mfrac>
+                         <mi>1</mi>
+                         <mi id="RC">RC</mi>
+                        </mfrac>
+                        
+                       </mfenced>
+                       <mrow>
+                        <mi>Vc</mi>
+                      </mrow>
+                      <mrow>
+                        <mo>+</mo>
+                      </mrow>
+                      <mfenced open="[" close="]" separators="    ">
+                       
+                        <mfrac>
+                         <mi>1</mi>
+                         <mi id="RC">RC</mi>
+                        </mfrac>
+                       
+                       </mfenced>
+                       <mrow>
+                        <mi>x</mi>
+                      </mrow>
+                  </math>
+    
+            </div>    
+            <h3 class="text-2xl font-black  uppercase">
+                Valores a ingresar
+            </h3>
+            <div class="flex flex-col content-center items-center justify-center">
+               
+                <label for="r">R</label>
+                <input id="r" type="text" placeholder="VALOR R">
+                <label for="c">C</label>
+                <input id="c" type="text" placeholder="VALOR C">
+                <input id="resolverProblema" class=" text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg hover:bg-indigo-800 h-12 w-1/5 m-2 text-lg" type="button" value="Ejecutar problema 1">
+            </div>
+    </main>
+    
+       
+       
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../scripts/problema1.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
