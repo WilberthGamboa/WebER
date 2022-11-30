@@ -18,12 +18,35 @@ btnResolverProblema.addEventListener('click',(e)=>{
                 text: 'Los datos ingresados no son números',
                 
               })
-        }else{
-           rc  = r*c;
-           const labelRC = document.querySelectorAll('#RC');
-    
-           labelRC[0].innerHTML=rc;
-           labelRC[1].innerHTML=rc;
+        }if (r==0 || c==0) {
+            Swal.fire({
+                icon: 'error',
+                title: 'VERIFIQUE LOS DATOS',
+                text: 'No se puede dividir entre 0',
+                
+              })
+            
+        } else{
+           
+            
+            const corchetes = document.querySelectorAll("#corchete");
+            while (corchetes[0].firstChild) {
+                corchetes[0].removeChild(corchetes[0].lastChild);
+              }
+
+              while (corchetes[1].firstChild) {
+                corchetes[1].removeChild(corchetes[1].lastChild);
+              }
+            
+            rc  = 1/ (r*c);
+           corchetes[0].innerHTML=  `
+           <mrow>
+           <mi id="RC">${-1*(rc)}</mi>
+            </mrow>
+           
+           `;
+           corchetes[1].innerHTML=`<mi id="RC">${(rc)}</mi>`;
+           
         }
         
     }else{
