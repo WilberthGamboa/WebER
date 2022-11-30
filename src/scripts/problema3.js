@@ -49,18 +49,19 @@ btnResolverProblema.addEventListener('click',(e)=>{
               }
             
             let valorEcuacion1 = ((-1/c)*((1/r)+(1/r1)));
-            let valorEcuacion4 =(1/(r1*c))
+            let valorEcuacion4 = (1/(r*c));
             let valorEcuacion2= (1/(r*c));
-            let valorEcuacion3 = ((1/(r1*c1)));
-            let valorEcuacion5  =(-1/(r1*c1))
+            let valorEcuacion3 = ((1/(r*c1)));
+            let valorEcuacion5 = (-1/(r*c1));
+
            ecuacion1.innerHTML=  `
            <mrow>
-           <mi id="RC">${(valorEcuacion1)}   &nbsp       ${valorEcuacion4}</mi>
+           <mi id="RC">${(valorEcuacion1)} &nbsp   ${(valorEcuacion4)}</mi>
             </mrow>
            
            `;
            ecuacion2.innerHTML=`<mi id="RC">${(valorEcuacion2)}</mi>`;
-           ecuacion3.innerHTML=`<mi id="RC">${(valorEcuacion3)}  &nbsp ${valorEcuacion5} </mi>`;
+           ecuacion3.innerHTML=`<mi id="RC">${(valorEcuacion3) } &nbsp ${(valorEcuacion5) }</mi>`;
            
         }
         
