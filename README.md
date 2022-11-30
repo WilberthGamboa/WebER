@@ -1,2 +1,2 @@
 # WebER
-# Página con ecuaciones de circuitos 
+Página con ecuaciones de circuitos 
