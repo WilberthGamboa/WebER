@@ -21,7 +21,8 @@ btnResolverProblema.addEventListener('click',(e)=>{
                 text: 'Los datos ingresados no son números',
                 
               })
-        }if (r==0 || c==0 || c1==0 || r1==0) {
+        }else{
+          if (r==0 || c==0 || c1==0 || r1==0) {
             Swal.fire({
                 icon: 'error',
                 title: 'VERIFIQUE LOS DATOS',
@@ -30,12 +31,11 @@ btnResolverProblema.addEventListener('click',(e)=>{
               })
             
         } else{
-            console.log("else")
-           
             
             const ecuacion1 = document.querySelector("#ecuacion1");
             const ecuacion2 = document.querySelector("#ecuacion2");
             const ecuacion3 = document.querySelector("#ecuacion3");
+            
             while (ecuacion1.firstChild) {
                 ecuacion1.removeChild(ecuacion1.lastChild);
               }
@@ -49,10 +49,10 @@ btnResolverProblema.addEventListener('click',(e)=>{
               }
             
             let valorEcuacion1 = ((-1/c)*((1/r)+(1/r1)));
-            let valorEcuacion4 =(1/(r1*c))
+            let valorEcuacion4 =(1/(r1*c)); 
             let valorEcuacion2= (1/(r*c));
             let valorEcuacion3 = ((1/(r1*c1)));
-            let valorEcuacion5  =(-1/(r1*c1))
+            let valorEcuacion5  =(-1/(r1*c1));
            ecuacion1.innerHTML=  `
            <mrow>
            <mi id="RC">${(valorEcuacion1)}   &nbsp       ${valorEcuacion4}</mi>
@@ -63,6 +63,9 @@ btnResolverProblema.addEventListener('click',(e)=>{
            ecuacion3.innerHTML=`<mi id="RC">${(valorEcuacion3)}  &nbsp ${valorEcuacion5} </mi>`;
            
         }
+
+
+        } 
         
     }else{
         Swal.fire({

@@ -1,14 +1,13 @@
 
-const btnResolverProblema = document.querySelector("#resolverProblema")
-
+const btnResolverProblema = document.querySelector("#resolverProblema");
 btnResolverProblema.addEventListener('click',(e)=>{
 
     const valorR = document.querySelector("#r").value;
     const valorC= document.querySelector("#c").value;
     
-    const r = Number(valorR);
+    const r = Number(valorR); 
     const c  = Number(valorC);
-    console.log(r)
+    
     let rc;
     if (valorC!="" || valorR!="") {
         if (isNaN(r)|| isNaN(c))   {
@@ -18,7 +17,8 @@ btnResolverProblema.addEventListener('click',(e)=>{
                 text: 'Los datos ingresados no son números',
                 
               })
-        }if (r==0 || c==0) {
+        }else{
+          if (r==0 || c==0) {
             Swal.fire({
                 icon: 'error',
                 title: 'VERIFIQUE LOS DATOS',
@@ -27,8 +27,6 @@ btnResolverProblema.addEventListener('click',(e)=>{
               })
             
         } else{
-           
-            
             const corchetes = document.querySelectorAll("#corchete");
             while (corchetes[0].firstChild) {
                 corchetes[0].removeChild(corchetes[0].lastChild);
@@ -48,6 +46,10 @@ btnResolverProblema.addEventListener('click',(e)=>{
            corchetes[1].innerHTML=`<mi id="RC">${(rc)}</mi>`;
            
         }
+          
+        }
+        
+       
         
     }else{
         Swal.fire({

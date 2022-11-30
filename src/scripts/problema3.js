@@ -21,7 +21,8 @@ btnResolverProblema.addEventListener('click',(e)=>{
                 text: 'Los datos ingresados no son números',
                 
               })
-        }if (r==0 || c==0 || c1==0 || r1==0) {
+        }else{
+          if (r==0 || c==0 || c1==0 || r1==0) {
             Swal.fire({
                 icon: 'error',
                 title: 'VERIFIQUE LOS DATOS',
@@ -30,7 +31,7 @@ btnResolverProblema.addEventListener('click',(e)=>{
               })
             
         } else{
-            console.log("else")
+          
            
             
             const ecuacion1 = document.querySelector("#ecuacion1");
@@ -63,6 +64,7 @@ btnResolverProblema.addEventListener('click',(e)=>{
            ecuacion2.innerHTML=`<mi id="RC">${(valorEcuacion2)}</mi>`;
            ecuacion3.innerHTML=`<mi id="RC">${(valorEcuacion3) } &nbsp ${(valorEcuacion5) }</mi>`;
            
+        }
         }
         
     }else{
