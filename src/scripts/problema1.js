@@ -38,10 +38,11 @@ btnResolverProblema.addEventListener('click',(e)=>{
             
             rc  = 1/ (r*c);
            corchetes[0].innerHTML=  `
-           <mrow>
+           <mfenced  class="" id="corchete" open="[" close="]" separators="    ">
+      
            <mi id="RC">${-1*(rc)}</mi>
-            </mrow>
-           
+       
+            </mfenced> 
            `;
            corchetes[1].innerHTML=`<mi id="RC">${(rc)}</mi>`;
            
